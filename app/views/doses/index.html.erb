@@ -1,0 +1,11 @@
+<h1>All ingredients</h1>
+
+<ol>
+  <% @doses.each do |dose| %>
+    <li>
+      <%= link_to dose.name, dose_path(dose) %>
+    </li>
+  <% end %>
+</ol>
+
+<%= link_to 'Choose your ingredients', new_cocktail_path %>
